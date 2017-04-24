@@ -1,21 +1,21 @@
 import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 
-export default class Home extends Component {
+@inject("store") @observer
+export default class Library extends Component {
 
     constructor(props) {
         super(props);
+        this.store = this.props.store
     }
 
     render() {
+        const store = this.store
         return (
-            <div className="page home">
+            <div className="page library">
                 <div className="container">
                     <header className="grid header">
-                        <h1>
-                            This will be the landingpage, enabling you to continue watching where you left of... some
-                            time in the future...
-                        </h1>
+                       Lirbrary
                     </header>
                 </div>
             </div>

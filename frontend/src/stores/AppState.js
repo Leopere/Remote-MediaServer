@@ -34,14 +34,7 @@ class AppState {
   }
 
   @action authenticate() {
-    return new Promise((resolve,reject) => {
-          this.authenticating = true
-          setTimeout(() => {
-            this.authenticated = !this.authenticated
-            this.authenticating = false
-            resolve(this.authenticated)
-        }, 0)
-    })
+    // Authenticate here sometime in the future
   }
   
 }
